@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <!-- <script src="function.js"></script> -->
 </head>
 
 <body>
@@ -15,31 +16,133 @@
         <h3>Sharing the Top 10 songs in my playlist right now.</h3>
         <hr>
         <div class="song-menu">
-            <a href="https://www.youtube.com/watch?v=6HCUoMgviwU" target="_blank" class="song-item 1"><i class = "song-icon"></i>This is me <em>by
-                    Demi Lovato</em></a>
-            <a href="https://www.youtube.com/watch?v=62llzl7iKkE" target="_blank" class="song-item 2"><i class = "song-icon"></i>Wouldn't change a
-                thing <em>by Demi Lovato, Joe Jonas</em></a>
-            <a href="https://www.youtube.com/watch?v=pAzFRfzwT-g" target="_blank" class="song-item 3"><i class = "song-icon"></i>Gotta Go My Own
-                Way<em> by Zac Efron, Vanessa Hudgens</em></a>
-            <a href="https://www.youtube.com/watch?v=jO2viLEW-1A" target="_blank" class="song-item 4"><i class = "song-icon"></i>Comethru <em> by
-                    Jeremy Tucker</em></a>
-            <a href="https://www.youtube.com/watch?v=PT2_F-1esPk" target="_blank" class="song-item 5"><i class = "song-icon"></i>Closer<em> by The
-                    Chainsmokers</em></a>
-            <a href="https://www.youtube.com/watch?v=_kqQDCxRCzM" target="_blank" class="song-item 6"><i class = "song-icon"></i>You & I <em>by One
-                    Direction</em></a>
-            <a href="https://www.youtube.com/watch?v=RgKAFK5djSk" target="_blank" class="song-item 7"><i class = "song-icon"></i>See You Again
-                <em>by Wiz Khalifa</em></a>
-            <a href="https://www.youtube.com/watch?v=SlPhMPnQ58k" target="_blank" class="song-item 8"><i class = "song-icon"></i>Memories <em>by
-                    Maroon 5</em></a>
-            <a href="https://www.youtube.com/watch?v=2Vv-BfVoq4g" target="_blank" class="song-item 9"><i class = "song-icon"></i>Perfect <em>by Ed
-                    Sheeran</em></a>
-            <a href="https://www.youtube.com/watch?v=CMXMELv9Pr0" target="_blank" class="song-item 10"><i class = "song-icon"></i>Love Me Like You
-                Do <em>by Ellie Goulding</em></a>
+
+            <!-- Tags with javascript based event handling. -->
+            <a href="https://www.youtube.com/watch?v=6HCUoMgviwU" target="_blank" class="song-item 1" 
+                onclick="changeImage(1)">
+                <i class="song-icon"></i>This is me <em>by Demi Lovato</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=62llzl7iKkE" target="_blank" class="song-item 2"
+                onclick="changeImage(2)">
+                <i class="song-icon"></i>Wouldn't change a thing <em>by Demi Lovato, Joe Jonas</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=pAzFRfzwT-g" target="_blank" class="song-item 3"
+                onclick="changeImage(3)">
+                <i class=" song-icon"></i>Gotta Go My Own Way<em> by Zac Efron, Vanessa Hudgens</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=jO2viLEW-1A" target="_blank" class="song-item 4"
+                onclick="changeImage(4)">
+                <i class=" song-icon"></i>Comethru <em> by Jeremy Tucker</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=PT2_F-1esPk" target="_blank" class="song-item 5"
+                onclick="changeImage(5)">
+                <i class=" song-icon"></i>Closer<em> by The Chainsmokers</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=_kqQDCxRCzM" target="_blank" class="song-item 6"
+                onclick="changeImage(6)">
+               <i class=" song-icon"></i>You & I <em>by One Direction</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=RgKAFK5djSk" target="_blank" class="song-item 7"
+                onclick="changeImage(7)">
+                <i class=" song-icon"></i>See You Again <em>by Wiz Khalifa</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=SlPhMPnQ58k" target="_blank" class="song-item 8"
+                onclick="changeImage(8)">
+                <i class=" song-icon"></i>Memories <em>by Maroon 5</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=2Vv-BfVoq4g" target="_blank" class="song-item 9"
+                onclick="changeImage(9)">
+                <i class=" song-icon"></i>Perfect <em>by Ed Sheeran</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=CMXMELv9Pr0" target="_blank" class="song-item 10"
+                onclick="changeImage(10)">
+                <i class=" song-icon"></i>Love Me Like You Do <em>by Ellie Goulding</em>
+            </a>
+            
         </div>
         <div class="back-image">
-            <img src="tenor.gif">
+            <img src="Images/tenor.gif" id="playback-image">
         </div>
     </div>
-</body>
 
+    <script>
+        function changeImage(song_number) {
+        switch (song_number) {
+            case 1:
+                document.getElementById("playback-image").src = "Images/Song1.gif";
+                break;
+            case 2:
+                document.getElementById("playback-image").src = "Images/Song2.gif";
+                break;
+            case 3:
+                document.getElementById("playback-image").src = "Images/Song3.gif";
+                break;
+            case 4:
+                document.getElementById("playback-image").src = "Images/Song4.gif";
+                break;
+            case 5:
+                document.getElementById("playback-image").src = "Images/Song5.gif";
+                break;
+            case 6:
+                document.getElementById("playback-image").src = "Images/Song6.gif";
+                break;
+            case 7:
+                document.getElementById("playback-image").src = "Images/Song7.gif";
+                break;
+            case 8:
+                document.getElementById("playback-image").src = "Images/Song8.gif";
+                break;
+            case 9:
+                document.getElementById("playback-image").src = "Images/Song9.gif";
+                break;
+            case 10:
+                document.getElementById("playback-image").src = "Images/Song10.gif";
+                break;
+        }
+    }
+    </script>
+</body>
 </html>
+
+
+<!-- Tags without javascript coding. -->
+<!--        <a href="https://www.youtube.com/watch?v=6HCUoMgviwU" target="_blank" class="song-item 1" 
+                id="song-item 1">
+                <i class="song-icon"></i>This is me <em>by Demi Lovato</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=62llzl7iKkE" target="_blank" class="song-item 2"
+                id = "song-item 2">
+                <i class= "song-icon"></i>Wouldn't change a thing <em>by Demi Lovato, Joe Jonas</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=pAzFRfzwT-g" target="_blank" class="song-item 3"
+                id = "song-item 3">
+                <i class=" song-icon"></i>Gotta Go My Own Way<em> by Zac Efron, Vanessa Hudgens</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=jO2viLEW-1A" target="_blank" class="song-item 4"
+                id = "song-item 4">
+                <i class=" song-icon"></i>Comethru <em> by Jeremy Tucker</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=PT2_F-1esPk" target="_blank" class="song-item 5"
+                id = "song-item 5">
+                <i class=" song-icon"></i>Closer<em> by The Chainsmokers</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=_kqQDCxRCzM" target="_blank" class="song-item 6"
+                id = "song-item 6">
+               <i class=" song-icon"></i>You & I <em>by One Direction</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=RgKAFK5djSk" target="_blank" class="song-item 7"
+                id = "song-item 7">
+                <i class=" song-icon"></i>See You Again <em>by Wiz Khalifa</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=SlPhMPnQ58k" target="_blank" class="song-item 8"
+                id = "song-item 8">
+                <i class=" song-icon"></i>Memories <em>by Maroon 5</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=2Vv-BfVoq4g" target="_blank" class="song-item 9"
+                id = "song-item 9">
+                <i class=" song-icon"></i>Perfect <em>by Ed Sheeran</em>
+            </a>
+            <a href="https://www.youtube.com/watch?v=CMXMELv9Pr0" target="_blank" class="song-item 10"
+                id = "song-item 10">
+                <i class=" song-icon"></i>Love Me Like You Do <em>by Ellie Goulding</em>
+            </a>
