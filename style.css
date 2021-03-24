@@ -1,0 +1,77 @@
+/* Refers to a class declaration for any html tag */
+body{
+    margin:0;
+    height: 100%;
+}
+.canvas{
+    padding: 30px;
+    min-height: 100%; 
+    /* fallback for old browsers */
+    background-color: darkslateblue;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom, white, darkslateblue);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, safari 7+ */
+    background: linear-gradient(to bottom, white, slateblue);
+}
+h1,h3{
+    text-align: center;
+    color: darkslategray;
+    font-family: 'Times New Roman';
+}
+h3{
+    font-style: italic;
+}
+.song-menu{                     
+    width: 250px;
+    display: list-item;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 7px;
+    margin: 20px 10px;
+    border-radius: 10px;
+    position: absolute;
+}
+.song-menu a{
+    text-decoration: none;
+    color: midnightblue;
+    display: block;
+    font-family: cursive;
+    margin-bottom: 5px;
+}
+.song-menu a:hover{
+    color: purple;
+    background-color:pink;
+}
+.song-menu .song-item{
+    display: block;
+    line-height: 20px;
+    box-sizing: border-box;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+}
+.song-menu .song-icon{
+    margin:5px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid;
+    width: 10px;
+    height: 10px;
+    line-height: 20px;
+    display: inline-block;
+    transition: all 0.5s;
+}
+.song-menu .song-icon:hover{
+    transform: rotate(360deg) scale(1.5);
+}
+.song-menu .song-item:hover{
+    transform: scale(1.1);
+}
+
+.back-image{
+    margin: 50px;
+    position: relative;
+    transform: translate(50%,2%);
+}
+img{
+    display: block;
+    width: 30%;
+}
