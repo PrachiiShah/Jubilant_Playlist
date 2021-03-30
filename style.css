@@ -46,6 +46,7 @@ h3{
     display: block;
     line-height: 20px;
     box-sizing: border-box;
+    border-radius: 10px;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
 }
